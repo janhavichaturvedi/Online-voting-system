@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/janhavichaturvedi/Online-voting-system.git/static/css/main.54a36672.css",
+    "main.js": "/janhavichaturvedi/Online-voting-system.git/static/js/main.a017cfee.js",
+    "index.html": "/janhavichaturvedi/Online-voting-system.git/index.html",
+    "main.54a36672.css.map": "/janhavichaturvedi/Online-voting-system.git/static/css/main.54a36672.css.map",
+    "main.a017cfee.js.map": "/janhavichaturvedi/Online-voting-system.git/static/js/main.a017cfee.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.54a36672.css",
+    "static/js/main.a017cfee.js"
+  ]
+}
