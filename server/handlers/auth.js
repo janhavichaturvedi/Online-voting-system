@@ -1,6 +1,6 @@
 const db = require('../models');
 const jwt = require('jsonwebtoken');
-
+require("dotenv").config();
 // for development only
 exports.getUsers = async (req, res, next) => {
   try {
@@ -19,7 +19,7 @@ exports.register = async (req, res, next) => {
   try {
     const user = await db.User.create(req.body);
     const { id, username } = user;
-    const token = jwt.sign({ id, username }, process.env.SECRET);
+    const token = jwt.sign({ id, username }, process.env.JWTSECRET);
 
     return res.status(201).json({
       id,
@@ -46,7 +46,7 @@ exports.login = async (req, res, next) => {
     const valid = await user.comparePassword(req.body.password);
 
     if (valid) {
-      const token = jwt.sign({ id, username }, process.env.SECRET);
+      const token = jwt.sign({ id, username }, process.env.JWTSECRET);
       return res.status(200).json({
         id,
         username,

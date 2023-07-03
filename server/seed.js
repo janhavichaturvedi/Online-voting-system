@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 
 mongoose.set('debug', true);
 mongoose.Promise = global.Promise;
-mongoose.connect(process.env.DATABASE);
+mongoose.connect(process.env.MONGODBURI);
 
 const db = require('./models');
 

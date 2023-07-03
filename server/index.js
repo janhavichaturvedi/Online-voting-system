@@ -1,4 +1,6 @@
-require('dotenv').config();
+const dotenv = require("dotenv");
+
+dotenv.config(`${process.env.JWTSECRET}`);
 
 const express = require('express');
 const cors = require('cors');
@@ -6,6 +8,7 @@ const bodyParser = require('body-parser');
 
 const routes = require('./routes');
 const handle = require('./handlers');
+const { REACT_APP_API_KEY } = process.env;
 
 const app = express();
 const PORT = process.env.PORT || 4000;

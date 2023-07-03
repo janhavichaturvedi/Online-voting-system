@@ -35,6 +35,11 @@ const Navbar = ({ auth, logout }) => (
               </Link>
             </li>
             <li>
+              <Link className="navbar-item" to="/poll/delete">
+                Delete Poll
+              </Link>
+            </li>
+            <li>
               <a className="navbar-item" onClick={logout}>
                 Logout
               </a>
@@ -53,5 +58,5 @@ export default connect(
   store => ({
     auth: store.auth,
   }),
-  { logout },
+  { logout }
 )(Navbar);

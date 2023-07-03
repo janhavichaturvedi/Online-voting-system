@@ -75,3 +75,15 @@ export const vote = (path, data) => {
     }
   };
 };
+
+export const deletePoll = (pollId) => {
+  return async (dispatch) => {
+    try {
+      await API.call('delete', `polls/${pollId}`);
+      dispatch(removeError());
+    } catch (err) {
+      const { error } = err.response.data;
+      dispatch(addError(error));
+    }
+  };
+};

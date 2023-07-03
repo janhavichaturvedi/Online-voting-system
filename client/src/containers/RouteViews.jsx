@@ -8,11 +8,13 @@ import AuthPage from '../pages/AuthPage';
 import PollPage from '../pages/PollPage';
 import CreatePollPage from '../pages/CreatePollPage';
 import TestPage from '../pages/TestPage';
+import DeletePollPage from '../pages/DeletePollPage';
 
 const RouteViews = ({ getCurrentPoll, auth }) => (
   <main className="container">
     <Switch>
       <Route exact path="/" render={props => <HomePage {...props} />} />
+      <Route exact path="/poll/delete/:pollId" component={DeletePollPage} />
       <Route
         exact
         path="/login"

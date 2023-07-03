@@ -16,3 +16,12 @@ export const call = async (method, path, data) => {
 };
 
 export default { setToken, call };
+
+export const deletePoll = async (pollId) => {
+  try {
+    await call('delete', `poll/${pollId}`);
+  } catch (error) {
+    console.error('Error deleting poll:', error);
+    // Handle error if necessary
+  }
+};
